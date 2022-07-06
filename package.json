@@ -1,0 +1,74 @@
+{
+  "name": "vue-qbao",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build --mode prod",
+    "build:test": "vite build --mode test",
+    "build:pre": "vite build --mode pre",
+    "build:prod": "vite build --mode prod",
+    "preview": "vite preview",
+    "eslint:comment": "使用 ESLint 检查并自动修复 src 目录下所有扩展名为 .js 和 .vue 的文件",
+    "eslint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
+    "prettier:comment": "自动格式化当前目录下的所有文件",
+    "prettier": "prettier .  --write",
+    "prepare": "husky install",
+    "commit:comment": "引导设置规范化的提交信息",
+    "commit": "git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,vue}": [
+      "npm run eslint",
+      "npm run prettier"
+    ]
+  },
+  "dependencies": {
+    "@vueuse/core": "^8.2.0",
+    "axios": "^0.27.2",
+    "pinia": "^2.0.12",
+    "vant": "^3.4.9",
+    "vue": "^3.2.25",
+    "vue-router": "^4.0.14"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.30.0",
+    "@typescript-eslint/parser": "^5.30.0",
+    "@vitejs/plugin-legacy": "^1.8.2",
+    "@vitejs/plugin-vue": "^2.2.0",
+    "amfe-flexible": "^2.2.1",
+    "autoprefixer": "^10.4.7",
+    "commitizen": "^4.2.4",
+    "commitlint-config-cz": "^0.13.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^6.6.0",
+    "eslint": "^8.12.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.1.0",
+    "eslint-plugin-vue": "^9.1.1",
+    "husky": "^8.0.0",
+    "less": "^4.1.2",
+    "lint-staged": "^13.0.3",
+    "postcss": "^8.4.14",
+    "postcss-pxtorem": "^6.0.0",
+    "prettier": "^2.6.1",
+    "terser": "^5.14.1",
+    "typescript": "^4.5.4",
+    "unplugin-vue-components": "^0.20.1",
+    "vite": "^2.9.9",
+    "vue-tsc": "^0.38.2"
+  }
+}
