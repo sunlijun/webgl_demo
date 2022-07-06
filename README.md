@@ -1,4 +1,3 @@
-# vue-qbao 保险前端页面-长险
 
 ## 安装
 
@@ -20,7 +19,3 @@ vscode插件： Vetur、Vue Language Features、Vue 3 Snippets
 "prettier.semi": false,
 "prettier.singleQuote": true,
 ```
-
-#### 开发使用说明
-
-https://qscwiki001.qingsongchou.com/pages/viewpage.action?pageId=97451727
